@@ -1,0 +1,1 @@
+# MajinBoolean01.github.io
