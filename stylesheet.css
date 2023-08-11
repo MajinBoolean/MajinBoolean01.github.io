@@ -1,0 +1,408 @@
+/* Global Styles*/
+body {
+  background-color:  #3C3D42 ;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding-top: 50px
+}
+header {
+  background-color: #3C3D42;
+  padding: 20px;
+}
+h2, p{
+  text-align: center;
+}
+nav{
+  position: fixed;
+  left: 0;
+  top:15%;
+  transform: translateY(-50%);
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin-bottom: 10px;
+}
+a{
+  display:block;
+  text-decoration: none;
+  color: #ffffff;
+}
+/*Logo*/
+.glitch-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #3C3D42;
+}
+
+.glitch {
+  position: relative;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #ff00ff;
+  z-index: -2;
+}
+
+@keyframes glitch-color {
+  0% {
+     transform: translate(0);
+  }
+
+  20% {
+     transform: translate(-3px, 3px);
+  }
+
+  40% {
+     transform: translate(-3px, -3px);
+  }
+
+  60% {
+     transform: translate(3px, 3px);
+  }
+
+  80% {
+     transform: translate(3px, -3px);
+  }
+
+  to {
+     transform: translate(0);
+  }
+}
+
+
+ /*.searchBar{
+  text-align: left;
+ }*/
+ .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  
+}
+
+#search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFA903;
+  color: #fff;
+  cursor:pointer;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+
+ /*Favorites*/ 
+.button-container {
+  
+  flex-direction: column;
+  align-items: right;
+  outline: rgb(254, 252, 252);
+  text-align: right;
+  padding: 10px;
+  background-color: #3C3D42;
+}
+
+.button-container a:hover {
+  color:  #FFA903;
+  
+}
+.button-container {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+/*Nav List  index.html*/
+.genre-list-container {
+  outline: rgb(254, 251, 251);
+  display:flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: right;
+  vertical-align: top;
+  font-size: 15;
+  background-color: #3C3D42;
+  padding: 20px;
+ 
+}
+
+#genre-list {
+  justify-content: right;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #3C3D42;
+  border-radius: 5px;
+  max-width: 150px;
+  margin:  0 auto;
+}
+
+.genre-list a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3C3D42;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 4px;
+  transition: 0.4s ease-in-out;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#genre-list a:hover {
+  color: #FFA903;
+}
+/* Carousel Grid */
+.viewingOption-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 70%; /* Adjust the max-height to set the visible height of the carousel */
+}
+
+
+ 
+.viewingOption-container > div {
+  width: 90%;
+  height: 90%; /* Adjust the width of each movie card as needed */
+  margin-bottom: 5%;
+  background-color: #1D1D1D;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#videoPlayer{
+  width: 90%;
+}
+
+.viewingOption-container h2 {
+  margin-top: 0;
+}
+
+.viewingOption-container a {
+  color: #FFA903;
+  text-decoration: none;
+  display: block;
+}
+
+.viewingOption-container a:hover {
+  color: #9CCD62;
+}
+.videoplayer{
+  
+}
+
+/*landingPage.html*/
+.landingPage-container {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#landingPageSignUp {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#landingPageSignUp h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#landingPageSignUp p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#landingPageSignUp a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFA903;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#landingPageSignUp a:hover {
+  background-color: #9CCD62;
+}
+
+/* Features Section Styles */
+#features {
+  background-color: #3C3D42;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#features p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*Sign Up page*/
+.signUpFormContainer{
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"]{
+  width: 380px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0E3FA9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color:  #FFA903;
+  transition: 0.5s ease-in-out;
+}
+/*Favorites page*/
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.movie {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.movie img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer*/
+footer {
+  background-color: #3C3D42;
+  padding: 0;
+  align-content: flex-end;
+  text-align: center;
+}
+/*Genre*/
+.genre-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+label, select, button {
+  margin-right: 1rem;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+footer p {
+  font-size: 14px;
+  color: #ffffff;
+} 
+/* TMDB Logo Styles */
+#tmdb-logo {
+  width: 100px;
+  height: 90px;
+  position: center;
+  background-color: #0d253f;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 90px;
+  color:  #01b4e4;
+}
+
+
+/* Adjust the font-size and positioning to fine-tune the logo */
+
+ 
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
